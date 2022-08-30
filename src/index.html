@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <main class="app">
+        <div class="app-projects">
+            <h1 class="project-title">Projects:</h1>
+            <div class="project-list">
+            </div>
+            <div class="project-template">
+                <input type="text" name="name" id="project-name-input">
+                <button type="button" class="add-project-button">Add Project</button>
+            </div>
+        </div>
+        <div class="app-tasks">
+            <div class="task-settings">
+                <div class="setting-container">
+                    <label for="task-active-filter">Show:</label>
+                    <select name="active" id="task-active-filter" class="task-filter">
+                        <option value="all">All</option>
+                        <option value="active">Active</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                    <label for="task-date-filter">Time:</label>
+                    <select name="date" id="task-date-filter" class="task-filter">
+                        <option value="all">All</option>
+                        <option value="today">Today</option>
+                        <option value="upcoming">Upcoming</option>
+                    </select>
+                </div>
+                <div class="setting-container">
+                    <button type="button" class="clear-completed-button">Clear Completed</button>
+                    <button type="button" class="clear-all-button">Clear All</button>
+                </div>
+            </div>
+            <div class="task-list">
+            </div>
+            <div class="task-template">
+                <div class="task-template-content">
+                    <input type="text" name="title" class="task-title-input">
+                    <input type="date" name="date" class="task-date-input">
+                </div>
+                <button type="button" class="add-task-button">Add Task</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
