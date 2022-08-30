@@ -24,12 +24,6 @@ class App {
 
     }
 
-    setProjectList(object) {
-
-        this.projectList = object;
-
-    }
-
     addTask(title, date, project) {
 
         if (this.projectList.hasOwnProperty(project) && !this.projectList[project].hasTask(title) && project && title.length > 0 && title.length <= 36) {
