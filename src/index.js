@@ -26,7 +26,7 @@ const errors = {
 }
 
 const app = new App();
-const ui = new UI(app, elements)
+const ui = new UI(app, elements);
 ui.render();
 
 function eventHandler(e) {
