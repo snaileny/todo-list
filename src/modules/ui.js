@@ -81,7 +81,7 @@ class UI {
                     const taskCompleteClass = taskActive ? "" : "-complete";
             
                     const taskTemplate = `
-                    <div class="task${taskCompleteClass}" data-task-title="${taskTitle}" data-task-project="${taskDate}" data-task-active="${taskActive}">
+                    <div class="task${taskCompleteClass}" data-task-title="${taskTitle}" data-task-project="${taskProject}" data-task-active="${taskActive}">
                         <input type="checkbox" id="complete-${taskTitle}" class="complete-task-checkbox" ${checkBoxState}>
                         <div class="task-content">
                             <label for="complete-${taskTitle}" class="task-title">${taskTitle}</label>
@@ -131,7 +131,7 @@ class UI {
                 }
         
             }
-        
+    
             this.elements.projectList.innerHTML = projectListTemplate;
         
         }

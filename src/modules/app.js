@@ -26,9 +26,11 @@ class App {
 
     addTask(title, date, project) {
 
-        if (this.projectList.hasOwnProperty(project) && !this.projectList[project].hasTask(title) && project && title.length > 0 && title.length <= 36) {
+        const sanitizedTitle = title.replace(/[^\w|^\s]+/g, "");
 
-            const task = new Task(title, date);
+        if (this.projectList.hasOwnProperty(project) && !this.projectList[project].hasTask(sanitizedTitle) && project && sanitizedTitle.length > 0 && sanitizedTitle.length <= 36) {
+
+            const task = new Task(sanitizedTitle, date);
             task.setProject(project);
             this.projectList[project].addTask(task);
             return true;
@@ -67,10 +69,12 @@ class App {
 
     addProject(name) {
 
-        if (!this.hasProject(name) && this.projectList.length !== 6 && name.length > 0) {
+        const sanitizedName = name.replace(/[^\w|^\s]+/g, "");
 
-            const project = new TaskList(name);
-            this.projectList[name] = project;
+        if (!this.hasProject(sanitizedName) && this.projectList.length !== 6 && sanitizedName.length > 0) {
+
+            const project = new TaskList(sanitizedName);
+            this.projectList[sanitizedName] = project;
             return true;
 
         } else {
